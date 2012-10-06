@@ -28,3 +28,16 @@ Application Layout
     server.coffee           <- starts the web server(s)
     Cakefile                <- App. specific tasks
     package.json            <- mmm. npm package definitions
+
+USING
+=====
+
+1. Git clone the repo
+1. Delete the .git directory
+1. `git init` 
+1. push it to your own repo
+
+LICENSE
+=======
+
+MIT
