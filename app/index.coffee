@@ -30,9 +30,6 @@ app.configure ->
         dest:   "#{__base}/app/public/generated"
         bare:   false
 
-        # in development mode we will force recompile 
-        force:  if app.get("env") == "production" then false else true
-
     # serve both static (.jpg/.png/etc) and generated files
     app.use express.static "#{__base}/app/public/generated"
     app.use express.static "#{__base}/app/public/static"
