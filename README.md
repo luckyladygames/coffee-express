@@ -46,6 +46,7 @@ USING
 
 1. Git clone the repo
 1. Delete the .git directory
+1. `npm install`
 1. `git init` 
 1. push it to your own repo
 
