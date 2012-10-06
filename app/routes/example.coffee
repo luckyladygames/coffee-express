@@ -5,4 +5,4 @@ module.exports = (app) ->
     
     # with app, we declare our routes and the handlers
     app.get '/', (req, res) ->
-        res.send "It works"
+        res.render 'example'

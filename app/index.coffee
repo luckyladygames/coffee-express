@@ -39,7 +39,7 @@ app.configure ->
 
     # Set View Engine
     app.set 'view engine', 'jade'
-    app.set 'views', "#{__base}/src/views"
+    app.set 'views', "#{__base}/app/views"
 
 # Add routes to the application
 require("./routes/example")(app)
