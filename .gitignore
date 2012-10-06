@@ -2,7 +2,8 @@
 node_modules
 
 # ignore all the generated coffeescript and stylus files
-app/public/generated
+app/public/generated/*
+!app/public/generated/README.md
 
 # ignore auto-generated docs
 docs
