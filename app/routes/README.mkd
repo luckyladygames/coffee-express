@@ -1,0 +1,4 @@
+About
+=====
+
+Keep routes in separate files here. See `example.coffee` for how it is done

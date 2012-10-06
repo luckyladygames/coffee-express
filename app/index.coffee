@@ -41,8 +41,8 @@ app.configure ->
     app.set 'view engine', 'jade'
     app.set 'views', "#{__base}/src/views"
 
-app.get "/", (req, res) ->
-    res.send "Hello"
+# Add routes to the application
+require("./routes/example")(app)
 
 # Define Port
 port = process.env.PORT  or 3000
