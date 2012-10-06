@@ -1,5 +1,7 @@
-coffee-express
+coffee-express 
 ==============
+
+(Yet another Express+CoffeeScript template)
 
 This is how I like to lay out my Express + CoffeeScript projects. It uses CoffeeScript 
 instead of JavaScript and it has bits to make the coffeescript compiling as transparent 
