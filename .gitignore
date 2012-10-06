@@ -1,2 +1,8 @@
 .DS_Store
 node_modules
+
+# ignore all the generated coffeescript and stylus files
+app/public/generated
+
+# ignore auto-generated docs
+docs

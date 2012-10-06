@@ -14,15 +14,17 @@ It makes use of these tools:
 Application Layout
 ==================
 
-    app/                <- the application
-        lib/            <- put misc. libraries in here 
-        routes/         <- organize routes in here
-        views/          <- jade templates ...
-        public/         <- auto. gen stylus=>css, coffee=>js files
-        static/         <- static, public files (.png, .js, .css, etc.)
-        index.coffee    <- main entry point into the Application
-    docs/               <- generated documentation
-    test/               <- tests go in here
-    server.coffee       <- starts the web server(s)
-    Cakefile            <- App. specific tasks
-    package.json        <- mmm. npm package definitions
+    app/                    <- the application
+        lib/                <- put misc. libraries in here 
+        routes/             <- organize routes in here
+        views/              <- jade templates ...
+        public/             <- public files (or ment to be public)
+            src/            <- coffeescript/stylus source files
+            generated/      <- generated coffeescript files ...
+            static/         <- static, public files (.png, .js, .css, etc.)
+        index.coffee        <- main entry point into the Application
+    docs/                   <- generated documentation
+    test/                   <- tests go in here
+    server.coffee           <- starts the web server(s)
+    Cakefile                <- App. specific tasks
+    package.json            <- mmm. npm package definitions
