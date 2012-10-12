@@ -12,8 +12,10 @@ app.configure ->
     __base = process.cwd()
     app.use express.cookieParser "tempSecret"
     app.use express.bodyParser()
+
+    env = app.get("env")
     
-    if app.get("env") == "development"
+    if env == "development"
         app.use express.errorHandler()
 
     # detect asking for a css files and dynamically renders the stylus file to
@@ -24,6 +26,12 @@ app.configure ->
         
         # in development mode we will force recompile 
         force:  if app.get("env") == "production" then false else true
+        compile: (str, path) ->
+            stylus(str)
+                .set("filename", path)
+                .set("compress", env == "production")
+                .use(nib())
+                .import('nib')
     
     app.use connectCoffee
         src:    "#{__base}/app/public/src"

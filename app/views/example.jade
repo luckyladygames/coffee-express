@@ -2,9 +2,13 @@ doctype 5
 html
     head
         title Example Page
+        link(href="/css/test.css",rel="stylesheet")
+        script(src="/js/test.js")
     body
         :markdown
             # It's Awesome
 
         :coffeescript
-            document.write "CoffeeScript works too."
+            document.write "In Jade CoffeeScript works"
+            # from test.coffee, transpiled dynamically to /js/test.js
+            loaded "... so does included coffeescript"

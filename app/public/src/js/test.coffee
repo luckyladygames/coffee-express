@@ -1,1 +1,2 @@
-alert "hello"
+@loaded = (msg)->
+    document.write msg
