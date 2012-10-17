@@ -55,7 +55,7 @@ task 'test', 'Run Mocha tests', ->
 # Run the server in development mode, restarting it when source files change
 task 'dev', 'start dev env', ->
   process.env["NODE_ENV"] = "development"
-  supervisor = spawn 'supervisor', ['-w','app', '-e', 'js|coffee|jade', 'server.coffee']
+  supervisor = spawn 'supervisor', ['-w','app', '-e', 'js|coffee|jade', '-i', 'app/public/generated', 'server.coffee']
   supervisor.stdout.pipe process.stdout
   supervisor.stderr.pipe process.stderr
   log 'Watching js and jade files and running server', green
