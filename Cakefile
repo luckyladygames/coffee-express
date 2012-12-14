@@ -18,10 +18,12 @@ test = (callback) ->
   options = [
     '--compilers'
     'coffee:coffee-script'
-    '--colors'
+    '-C'
     '--require'
     'should'
     '--recursive'
+    '-R'
+    'spec'
   ]
   try
     cmd = which.sync 'mocha'
@@ -49,7 +51,6 @@ task 'docs', 'Generate annotated source code with Docco', ->
 
 
 task 'test', 'Run Mocha tests', ->
-    build()
     test -> log "done", green
 
 # Run the server in development mode, restarting it when source files change
