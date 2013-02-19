@@ -10,9 +10,9 @@
     , "stylus": "latest"
     , "nib": "latest"
     , "connect-coffee-script" : "latest"
-    , "markdown": "0.3.1"
-    , "which": "*"
-    , "async" : "0.1.x"
+    , "markdown": "latest"
+    , "which": "latest"
+    , "async" : "latest"
   }, "scripts": {
     "test": "mocha --require should --compilers coffee:coffee-script --colors"
   }, "devDependencies": {
