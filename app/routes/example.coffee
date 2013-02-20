@@ -6,3 +6,7 @@ module.exports = (app) ->
     # with app, we declare our routes and the handlers
     app.get '/', (req, res) ->
         res.render 'example'
+
+
+    app.get '/err', (req, res, next) ->
+        next("I just error out.")

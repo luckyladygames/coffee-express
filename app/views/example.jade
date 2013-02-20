@@ -3,7 +3,9 @@ html
     head
         title Example Page
         link(href="/css/test.css",rel="stylesheet")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
         script(src="/js/test.js")
+
     body
         :markdown
             # It's Awesome
@@ -12,3 +14,24 @@ html
             document.write "In Jade CoffeeScript works"
             # from test.coffee, transpiled dynamically to /js/test.js
             loaded "... so does included coffeescript"
+
+        :coffeescript
+            $ -> 
+                $('#ajaxError').on 'click', ->
+                    jqXHR = $.get('/err')
+                    jqXHR.done (resp) ->
+                        alert("response: #{JSON.stringify(resp)}")
+
+        hr
+
+        h2 Error Handling
+
+        p 
+            | Below is a demo. of error handling. The same route <code>/err</code> 
+            | sends back different error responses depending if the browser does
+            | an XHR request or a regular request.
+
+        button#ajaxError   
+            span Fetch Ajax error
+        | or   
+        a(href="/err") Go to Error

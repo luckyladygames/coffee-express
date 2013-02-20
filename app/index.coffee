@@ -49,6 +49,17 @@ app.configure ->
 # Add routes to the application
 require("./routes/example")(app)
 
+# Add in custom error handling middleware
+# Express applications require that error handling middleware 
+# happens after route declarations. So this is our last step 
+# Ref: http://expressjs.com/guide.html#error-handling
+
+app.use (err, req, res, next) ->
+    if req.xhr 
+        res.send error: err
+    else
+        res.send err
+
 # Define Port
 port = process.env.PORT  or 3000
 
