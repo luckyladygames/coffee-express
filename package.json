@@ -12,6 +12,7 @@
     , "connect-coffee-script" : "0.1.6"
     , "markdown": "0.4.0"
     , "async" : "0.2.9"
+    , "which" : "1.0.5"
   }, "scripts": {
     "test": "mocha --require should --compilers coffee:coffee-script --colors"
   }, "devDependencies": {
