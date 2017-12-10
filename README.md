@@ -18,7 +18,7 @@ Dependencies
 
 * [CoffeeScript](http://coffeescript.org) for client side and server development
 * [connect-coffee-script](ttps://github.com/wdavidw/node-connect-coffee-script)
-* [Mocha](http://visionmedia.github.com/mocha/) testing framework with should.js 
+* [Mocha](http://mochajs.org/) testing framework with should.js 
 * [Jade](http://jade-lang.com/) templates for HTML generation
 * [Stylus](http://learnboost.github.com/stylus/) for CSS generation
 * [Docco](http://jashkenas.github.com/docco/) for documentation generation
